@@ -1,0 +1,40 @@
+[tool.poetry]
+name = "python-setup"
+version = "0.1.0"
+description = ""
+authors = ["Subin Lee <subin.lee1226@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+
+[tool.poetry.group.linter.dependencies]
+pre-commit = "^3.5.0"
+ruff = "^0.1.5"
+mypy = "^1.7.0"
+
+[tool.ruff.lint]
+select = [
+    "E",  # pycodestyle errors
+    "W",  # pycodestyle warnings
+    "F",  # pyflakes
+    "I",  # isort
+    "C",  # flake8-comprehensions
+    "B",  # flake8-bugbears
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long, handled by black
+    "B008",  # do not perform function calls in argument defaults
+    "C901",  # too complex
+    "W191", # indentation contains tabs
+]
+
+[tool.mypy]
+python_version = "3.12"
+no_namespace_packages = true
+no_strict_optional = true
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
