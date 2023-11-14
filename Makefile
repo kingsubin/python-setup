@@ -1,6 +1,6 @@
 .PHONY: init
 init:
-	poetry install
+	poetry install --no-root
 
 .PHONY: lint
 lint:
