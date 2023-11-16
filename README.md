@@ -1,7 +1,5 @@
-# python project setup
+# FastAPI setup
 
-- python 3.12
-- poetry
-- mypy
-- ruff
-- pre-commit
+- fastapi
+- sqlalchemy
+- alembic
